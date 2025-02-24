@@ -1,0 +1,15 @@
+1)Functia gpio_config are rolul pentru configurarea unui pin GPIO conform setarilor
+specifice gpio_config_t. 
+2)Pinul GPIO4 poate fi configurat astfel: 
+gpio_mode_disable: pinul este dezactivat.
+gpio_mode_input: ->configurat ca intrare(citeste semnale)
+output: ->configurat ca iesire(trimite semnale)
+output_od:->open-drain, util pentru comunicatii cu mai multe dispozitive pe acelasi fir
+input_output_od: mod mixt, poate fi si intrare, si iesire open-drain
+input_output: mod mixt, poate fi si intrare, si iesire.
+3)vTaskDelay: functie specifica FreeRTOS pentru a intarzia o sarcina curenta pentru
+o perioada de timp. Este o metoda de implementare de delay-uri fara a blocat complet
+procesorul.
+4)App_main este functia principala deoarece esp-idf initializeaza sistemul de operare
+apoi apeleaza app_main(). Aceasta este punctul de intrare al aplicatiei utilizatorului
+si este gestionata de FreeRTOS.Esp-idf ruleaza un S.O bazat pe FreeRTOS.
